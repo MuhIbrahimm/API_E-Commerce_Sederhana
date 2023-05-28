@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71681082-893f-48f2-ae85-0f874c33a620" name="Changes" comment="Memperbaiki kode dan menambahkan depedensi" />
+    <list default="true" id="71681082-893f-48f2-ae85-0f874c33a620" name="Changes" comment="menambahkan database">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Connect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685194565407</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="menambahkan database">
+      <created>1685245719069</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685245719069</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -96,7 +106,8 @@
     <MESSAGE value="Commit Pertama" />
     <MESSAGE value="Coba web server sederhana" />
     <MESSAGE value="Memperbaiki kode dan menambahkan depedensi" />
-    <option name="LAST_COMMIT_MESSAGE" value="Memperbaiki kode dan menambahkan depedensi" />
+    <MESSAGE value="menambahkan database" />
+    <option name="LAST_COMMIT_MESSAGE" value="menambahkan database" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
