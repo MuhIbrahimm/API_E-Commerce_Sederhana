@@ -9,7 +9,7 @@ public class Connect {
         Connection connection = null;
         String rootPath = System.getProperty("user.dir");
         try {
-            String url = "jdbc:sqlite" + rootPath + "/database.db";
+            String url = "jdbc:sqlite" + rootPath + "/e-commerce.db";
             connection = DriverManager.getConnection(url);
             System.out.println("Anda Berhasil Terhubung");
         } catch (SQLException e) {

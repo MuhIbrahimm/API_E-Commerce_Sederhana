@@ -18,7 +18,6 @@ public class Main {
 
 
     public static class testHandler implements HttpHandler{
-
         @Override
         public void handle(HttpExchange exchange) throws IOException {
             if ("GET".equals(exchange.getRequestMethod())){
