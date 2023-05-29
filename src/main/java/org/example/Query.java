@@ -1,9 +1,7 @@
 package org.example;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
 
 public class Query {
     public static Connection connect() {
@@ -121,6 +119,32 @@ public class Query {
             pstmt.setString(5, phone_number );
             pstmt.setString(6, type );
             pstmt.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public void selectAll(String table){
+        String sql = "SELECT * FROM " + table;
+        ArrayList<String> result = new ArrayList<String>();
+        try {
+            Connection connection = this.connect();
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+
+            if (table.equals("addresses")){
+                result.add(Structure.addresses(resultSet.getInt("users"), resultSet.getString("type"), resultSet.getString("line1"), resultSet.getString("line2"), resultSet.getString("city"), resultSet.getString("province"), resultSet.getString("postcode")));
+            } else if (table.equals("order_details")){
+                result.add(Structure.order_detail(resultSet.getInt("order"), resultSet.getInt("product"), resultSet.getInt("quantity"), resultSet.getInt("price")));
+            } else if (table.equals("orders")){
+                result.add(Structure.orders(resultSet.getInt("id"), resultSet.getInt("buyer"), resultSet.getInt("note"), resultSet.getInt("total"), resultSet.getInt("discount"), resultSet.getString("is_paid")));
+            } else if (table.equals("products")){
+                result.add(Structure.products(resultSet.getInt("id"), resultSet.getInt("seller"), resultSet.getString("title"), resultSet.getString("description"), resultSet.getString("price"), resultSet.getInt("stock")));
+            } else if (table.equals("reviews")) {
+                result.add(Structure.reviews(resultSet.getInt("order"), resultSet.getInt("star"), resultSet.getString("description")));
+            } else if(table.equals("users")){
+                result.add(Structure.users(resultSet.getInt("id"), resultSet.getString("first_name"), resultSet.getString("last_name"), resultSet.getString("email"), resultSet.getString("phone_number"), resultSet.getString("type")));
+            }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
