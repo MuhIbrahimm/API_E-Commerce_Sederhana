@@ -107,7 +107,7 @@ public class Query {
         }
     }
 
-    public void users(int id, String first_name, String last_name, String email, String phone_number, String type) {
+    public void inputUsers(int id, String first_name, String last_name, String email, String phone_number, String type) {
         String sql = "INSERT INTO users(id, first_name, last_name, email, phone_number, type) VALUES(?,?,?,?,?,?)";
         try{
             Connection connection = this.connect();
