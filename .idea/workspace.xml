@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71681082-893f-48f2-ae85-0f874c33a620" name="Changes" comment="memperbarui database">
+    <list default="true" id="71681082-893f-48f2-ae85-0f874c33a620" name="Changes" comment="mengisi data database">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Handler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Structure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Connect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Connect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +38,9 @@
         <option name="workspaceImportEnabled" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2QElar4OnG349RsPiMruIhT3b4b" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -110,7 +118,35 @@
       <option name="project" value="LOCAL" />
       <updated>1685262963208</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="memperbarui data">
+      <created>1685274753501</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1685274753501</updated>
+    </task>
+    <task id="LOCAL-00009" summary="memperbarui data">
+      <created>1685274791754</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1685274791754</updated>
+    </task>
+    <task id="LOCAL-00010" summary="memperbarui data">
+      <created>1685274832656</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1685274832656</updated>
+    </task>
+    <task id="LOCAL-00011" summary="mengisi data database">
+      <created>1685362828303</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1685362828303</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -131,7 +167,9 @@
     <MESSAGE value="menambahkan database" />
     <MESSAGE value="menambahkan class connect" />
     <MESSAGE value="memperbarui database" />
-    <option name="LAST_COMMIT_MESSAGE" value="memperbarui database" />
+    <MESSAGE value="memperbarui data" />
+    <MESSAGE value="mengisi data database" />
+    <option name="LAST_COMMIT_MESSAGE" value="mengisi data database" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
