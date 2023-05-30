@@ -7,9 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71681082-893f-48f2-ae85-0f874c33a620" name="Changes" comment="menambahkan query">
+    <list default="true" id="71681082-893f-48f2-ae85-0f874c33a620" name="Changes" comment="merapikan kode">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Handler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Query.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Query.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +53,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_directory_selection": "D:/!!!!UNUD/Coding/Files/Java/API_E-Commerce_Sederhana/src/main/java",
+    "last_opened_file_path": "D:/!!!!UNUD/Coding/Files/Java/lat",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -158,7 +160,28 @@
       <option name="project" value="LOCAL" />
       <updated>1685371270984</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="menambahkan query dan handler">
+      <created>1685372361341</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1685372361341</updated>
+    </task>
+    <task id="LOCAL-00015" summary="ganti nama method">
+      <created>1685372468574</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1685372468574</updated>
+    </task>
+    <task id="LOCAL-00016" summary="merapikan kode">
+      <created>1685372759290</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1685372759290</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -183,7 +206,10 @@
     <MESSAGE value="mengisi data database" />
     <MESSAGE value="memisahkan class handler dan membuat structur" />
     <MESSAGE value="menambahkan query" />
-    <option name="LAST_COMMIT_MESSAGE" value="menambahkan query" />
+    <MESSAGE value="menambahkan query dan handler" />
+    <MESSAGE value="ganti nama method" />
+    <MESSAGE value="merapikan kode" />
+    <option name="LAST_COMMIT_MESSAGE" value="merapikan kode" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
