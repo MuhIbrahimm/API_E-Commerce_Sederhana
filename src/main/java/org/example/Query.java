@@ -11,9 +11,10 @@ public class Query {
         String rootPath = System.getProperty("user.dir");
         String url = "jdbc:sqlite:" + rootPath + "/e-commerce.db";
         try {
+            Class.forName("org.sqlite.JDBC");
             connection = DriverManager.getConnection(url);
             System.out.println("Anda Berhasil Terhubung");
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             System.err.println("Terjadi kesalahan saat menghubungkan ke database: " + e.getMessage());
         }
         return connection;
@@ -164,6 +165,38 @@ public class Query {
                 builder.append("Email: ").append(email).append("\n");
                 builder.append("Email: ").append(phone_number).append("\n");
                 builder.append("Address: ").append(type).append("\n\n");
+            }
+
+            // Menutup statement dan resultSet
+            resultSet.close();
+            statement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return builder.toString();
+    }
+
+    public static String getAllProducts() {
+        StringBuilder builder = new StringBuilder();
+        try {
+            Connection connection = connect();
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM products");
+
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                int seller = resultSet.getInt("seller");
+                String title = resultSet.getString("title");
+                String description = resultSet.getString("description");
+                String price = resultSet.getString("price");
+                int stock = resultSet.getInt("stock");
+                builder.append("Product ID: ").append(id).append("\n");
+                builder.append("Seller ID: ").append(seller).append("\n");
+                builder.append("Title: ").append(title).append("\n");
+                builder.append("Description: ").append(description).append("\n");
+                builder.append("Price: ").append(price).append("\n");
+                builder.append("Stock: ").append(stock).append("\n\n");
             }
 
             // Menutup statement dan resultSet
