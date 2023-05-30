@@ -1,57 +1,67 @@
 package org.example;
 
+import org.json.JSONObject;
+
 public class Structure {
-    public static String addresses(int users, String type, String line1, String line2, String city, String province, String postcode){
-        String result = "\t\"user\" : "+users+"\n"+
-                        "\t\"type\" : "+type+"\n"+
-                        "\t\"line1\" : "+line1+"\n"+
-                        "\t\"line2\" : "+line2+"\n"+
-                        "\t\"city\" : "+city+"\n"+
-                        "\t\"province\" : "+province+"\n"+
-                        "\t\"postcode\" : "+postcode+"\n";
-        return result;
-    }
-    public static String order_detail(int order, int product, int quantity, int price){
-        String result = "\t\"order\" : "+order+"\n"+
-                        "\t\"product\" : "+product+"\n"+
-                        "\t\"quantity\" : "+quantity+"\n"+
-                        "\t\"price\" : "+price+"\n";
-        return result;
-    }
-    public static String orders(int id, int buyer, int note, int total, int discount, String is_paid){
-        String result = "\t\"id\" : "+id+"\n"+
-                        "\t\"buyer\" : "+buyer+"\n"+
-                        "\t\"note\" : "+note+"\n"+
-                        "\t\"total\" : "+total+"\n"+
-                        "\t\"discount\" : "+discount+"\n"+
-                        "\t\"is_paid\" : "+is_paid+"\n";
-        return result;
+    public static JSONObject addresses(int users, String type, String line1, String line2, String city, String province, String postcode) {
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("user", users);
+        jsonObject.put("type", type);
+        jsonObject.put("line1", line1);
+        jsonObject.put("line2", line2);
+        jsonObject.put("city", city);
+        jsonObject.put("province", province);
+        jsonObject.put("postcode", postcode);
+        return jsonObject;
     }
 
-    public static String products(int id, int seller, String title, String description, String price, int stock){
-        String result = "\t\"id\" : "+id+"\n"+
-                        "\t\"seller\" : "+seller+"\n"+
-                        "\t\"title\" : "+title+"\n"+
-                        "\t\"description\" : "+description+"\n"+
-                        "\t\"price\" : "+price+"\n"+
-                        "\t\"stock\" : "+stock+"\n";
-        return result;
+    public static JSONObject order_detail(int order, int product, int quantity, int price) {
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("order", order);
+        jsonObject.put("product", product);
+        jsonObject.put("quantity", quantity);
+        jsonObject.put("price", price);
+        return jsonObject;
     }
 
-    public static String reviews(int order, int star, String description){
-        String result = "\t\"order\" : "+order+"\n"+
-                        "\t\"star\" : "+star+"\n"+
-                        "\t\"description\" : "+description+"\n";
-        return result;
+    public static JSONObject orders(int id, int buyer, int note, int total, int discount, String is_paid) {
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("id", id);
+        jsonObject.put("buyer", buyer);
+        jsonObject.put("note", note);
+        jsonObject.put("total", total);
+        jsonObject.put("discount", discount);
+        jsonObject.put("is_paid", is_paid);
+        return jsonObject;
     }
 
-    public static String users(int id, String first_name, String last_name, String email, String phone_number, String type){
-        String result = "\t\"id\" : "+id+"\n"+
-                        "\t\"first_name\" : "+first_name+"\n"+
-                        "\t\"last_name\" : "+last_name+"\n"+
-                        "\t\"email\" : "+email+"\n"+
-                        "\t\"phone_number\" : "+phone_number+"\n"+
-                        "\t\"type\" : "+type+"\n";
-        return result;
+    public static JSONObject products(int id, int seller, String title, String description, String price, int stock) {
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("id", id);
+        jsonObject.put("seller", seller);
+        jsonObject.put("title", title);
+        jsonObject.put("description", description);
+        jsonObject.put("price", price);
+        jsonObject.put("stock", stock);
+        return jsonObject;
+    }
+
+    public static JSONObject reviews(int order, int star, String description) {
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("order", order);
+        jsonObject.put("star", star);
+        jsonObject.put("description", description);
+        return jsonObject;
+    }
+
+    public static JSONObject users(int id, String first_name, String last_name, String email, String phone_number, String type) {
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("id", id);
+        jsonObject.put("first_name", first_name);
+        jsonObject.put("last_name", last_name);
+        jsonObject.put("email", email);
+        jsonObject.put("phone_number", phone_number);
+        jsonObject.put("type", type);
+        return jsonObject;
     }
 }

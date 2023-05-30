@@ -1,14 +1,16 @@
 package org.example;
 
+import org.json.JSONObject;
+
 import java.sql.*;
 import java.util.ArrayList;
 
 public class Query {
     public static Connection connect() {
         Connection connection = null;
-            String rootPath = System.getProperty("user.dir");
+        String rootPath = System.getProperty("user.dir");
+        String url = "jdbc:sqlite:" + rootPath + "/e-commerce.db";
         try {
-            String url = "jdbc:sqlite" + rootPath + "/e-commerce.db";
             connection = DriverManager.getConnection(url);
             System.out.println("Anda Berhasil Terhubung");
         } catch (SQLException e) {
@@ -16,6 +18,7 @@ public class Query {
         }
         return connection;
     }
+
 
     public void inputAddresses(int user, String type, String line1, String line2, String city, String province, String postcode) {
         String sql = "INSERT INTO addresses(user, type, line1, line2, city, province, postcode) VALUES(?,?,?,?,?,?,?)" + ";";
@@ -117,7 +120,7 @@ public class Query {
 
     public void selectAll(String table){
         String sql = "SELECT * FROM " + table + ";";
-        ArrayList<String> result = new ArrayList<String>();
+        ArrayList<JSONObject> result = new ArrayList<>();
         try {
             Connection connection = this.connect();
             Statement statement = connection.createStatement();
@@ -139,5 +142,37 @@ public class Query {
         } catch (SQLException e) {
             System.out.println("Terdapat kesalahan: " + e.getMessage());
         }
+    }
+
+    public static String getAllUsers() {
+        StringBuilder builder = new StringBuilder();
+        try {
+            Connection connection = connect();
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM users");
+
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String first_name = resultSet.getString("first_name");
+                String last_name = resultSet.getString("last_name");
+                String email = resultSet.getString("email");
+                String phone_number = resultSet.getString("phone_number");
+                String type = resultSet.getString("type");
+                builder.append("User ID: ").append(id).append("\n");
+                builder.append("First Name: ").append(first_name).append("\n");
+                builder.append("Last Name: ").append(last_name).append("\n");
+                builder.append("Email: ").append(email).append("\n");
+                builder.append("Email: ").append(phone_number).append("\n");
+                builder.append("Address: ").append(type).append("\n\n");
+            }
+
+            // Menutup statement dan resultSet
+            resultSet.close();
+            statement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return builder.toString();
     }
 }
